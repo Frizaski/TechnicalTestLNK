@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import format from 'date-fns/format';
-import parse from 'date-fns/parse';
-import startOfWeek from 'date-fns/startOfWeek';
-import getDay from 'date-fns/getDay';
-import id from 'date-fns/locale/id'; // Bahasa Indonesia
+import { format, parse, startOfWeek, getDay } from 'date-fns';
+import { id } from 'date-fns/locale';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import EventModal from '../components/EventModal';
 
-// JANGAN LUPA IMPORT CSS KALENDERNYA!
+// Impor CSS Kalender
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 // Konfigurasi tanggal untuk Kalender
@@ -93,7 +90,7 @@ const CalendarPage: React.FC = () => {
             startAccessor="start"
             endAccessor="end"
             style={{ height: '100%' }}
-            views={['month']} // Kita batasi hanya tampilan bulan sesuai gambar test
+            views={['month']} // Batasi hanya tampilan bulan sesuai gambar test
             popup={true}
           />
         </div>

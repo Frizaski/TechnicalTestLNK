@@ -11,7 +11,7 @@ const Login: React.FC = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // Memanggil API Login yang sudah kita buat
+      // Memanggil API Login yang sudah dibuat
       const response = await axios.post('http://localhost:5000/api/auth/login', {
         email,
         password,
